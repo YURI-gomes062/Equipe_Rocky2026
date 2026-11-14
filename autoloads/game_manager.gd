@@ -34,9 +34,16 @@ func start_game() -> void:
 	current_day = 1
 	_is_game_over_triggered = false
 	_set_state(GameState.PLAYING)
-	get_tree().paused = false # Ensure the tree is running
+	get_tree().paused = false 
 	
-	# TODO: Reset resources (Energy, O2, etc.) here in Task 03
+	# Reset base resources
+	ResourceManager.oxygen = 100
+	ResourceManager.food = 100
+	ResourceManager.health = 100
+	
+	# Generate energy for Day 1
+	ResourceManager.generate_daily_energy()
+	
 	print("[GameManager] New game started. Day 1.")
 	emit_signal("game_started")
 
@@ -47,13 +54,25 @@ func advance_day() -> void:
 		
 	current_day += 1
 	print("[GameManager] Day advanced to: ", current_day)
-	emit_signal("day_advanced", current_day)
 	
-	# TODO: Call resource processing here in Task 03
+	# 1. Process resources for the day that just ended
+	ResourceManager.process_turn_resources()
 	
-	# Check Victory Condition
+	# 2. Check Defeat Condition (Health reached 0)
+	if ResourceManager.health <= 0:
+		_trigger_game_over(false)
+		return # Stop execution here, the game is over
+		
+	# 3. Check Victory Condition (Survived 18 days)
 	if current_day >= MAX_DAYS:
 		_trigger_game_over(true)
+		return # Stop execution here, the game is over
+	
+	# 4. If the game continues, generate energy for the NEW day
+	ResourceManager.generate_daily_energy()
+	
+	# 5. Notify UI that the day has successfully advanced
+	emit_signal("day_advanced", current_day)
 
 ## Pauses the game and changes state. Called when opening Station popups or Diary.
 func pause_game() -> void:
@@ -80,7 +99,6 @@ func trigger_event() -> void:
 		
 	_set_state(GameState.EVENT)
 	get_tree().paused = true
-	# The EventManager will handle the actual popup logic
 
 ## Resolves an event and resumes the game.
 func resolve_event() -> void:
