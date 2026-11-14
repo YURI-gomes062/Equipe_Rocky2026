@@ -1,0 +1,23 @@
+[gd_resource type="Resource" script_class="EventData" format=3 uid="uid://yb6m77rlgmhk"]
+
+[ext_resource type="Script" uid="uid://bhw4yomp8e6lv" path="res://scripts/data/choice_data.gd" id="1_0bft3"]
+[ext_resource type="Script" uid="uid://dmv2t5nwohv8g" path="res://scripts/data/event_data.gd" id="1_adk6g"]
+[ext_resource type="Script" uid="uid://cm7gl7ri4fd54" path="res://scripts/data/effect_data.gd" id="2_f0nwc"]
+
+[sub_resource type="Resource" id="Resource_78kny"]
+script = ExtResource("2_f0nwc")
+value = -10
+metadata/_custom_type_script = "uid://cm7gl7ri4fd54"
+
+[sub_resource type="Resource" id="Resource_n84xb"]
+script = ExtResource("1_0bft3")
+choice_text_key = "CHOICE_DEFLECT"
+effects = Array[ExtResource("2_f0nwc")]([SubResource("Resource_78kny")])
+metadata/_custom_type_script = "uid://bhw4yomp8e6lv"
+
+[resource]
+script = ExtResource("1_adk6g")
+title_key = "EVENT_METEOR_TITLE"
+description_key = "EVENT_METEOR_DESC"
+choices = Array[ExtResource("1_0bft3")]([SubResource("Resource_n84xb")])
+metadata/_custom_type_script = "uid://dmv2t5nwohv8g"
