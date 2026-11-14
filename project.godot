@@ -11,11 +11,12 @@ config_version=5
 [application]
 
 config/name="Rocky_Project_Nasa2026"
+run/main_scene="res://teste_localizacao.tscn.tscn"
 config/features=PackedStringArray("4.7", "GL Compatibility")
 config/icon="res://icon.svg"
-
 [autoload]
 
+LocalizationManager="*uid://t4xd1c7ai067"
 GameManager="*uid://ctx22rgyoiyuk"
 ResourceManager="*uid://dmb0cbss6g4dx"
 
@@ -23,6 +24,10 @@ ResourceManager="*uid://dmb0cbss6g4dx"
 
 window/stretch/mode="canvas_items"
 window/stretch/aspect="expand"
+
+[internationalization]
+
+locale/translations=PackedStringArray("res://localization/translations.en.translation", "res://localization/translations.es.translation", "res://localization/translations.pt.translation")
 
 [physics]
 
