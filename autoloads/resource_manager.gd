@@ -95,3 +95,21 @@ func _update_resource(resource_name: String, new_value: int) -> void:
 	set(resource_name, clamped_value)
 	emit_signal("resource_changed", resource_name, clamped_value)
 	print("[ResourceManager] ", resource_name, " is now ", clamped_value)
+
+## Applies a generic effect fragment to the current resources.
+## Used when a player resolves an event.
+func apply_effect(effect: EffectData) -> void:
+	match effect.target_stat:
+		"Energy":
+			# Energy affects the daily available energy
+			daily_energy_available = clampi(daily_energy_available + effect.value, 0, 100)
+			emit_signal("daily_energy_generated", daily_energy_available)
+		"Oxygen":
+			_update_resource("oxygen", oxygen + effect.value)
+		"Food":
+			_update_resource("food", food + effect.value)
+		"Health":
+			_update_resource("health", health + effect.value)
+		"Research":
+			# Placeholder for Task 07
+			print("[ResourceManager] Research points changed by ", effect.value)

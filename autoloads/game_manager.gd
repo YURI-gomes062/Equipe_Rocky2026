@@ -61,18 +61,22 @@ func advance_day() -> void:
 	# 2. Check Defeat Condition (Health reached 0)
 	if ResourceManager.health <= 0:
 		_trigger_game_over(false)
-		return # Stop execution here, the game is over
+		return
 		
 	# 3. Check Victory Condition (Survived 18 days)
 	if current_day >= MAX_DAYS:
 		_trigger_game_over(true)
-		return # Stop execution here, the game is over
+		return
 	
 	# 4. If the game continues, generate energy for the NEW day
 	ResourceManager.generate_daily_energy()
 	
 	# 5. Notify UI that the day has successfully advanced
 	emit_signal("day_advanced", current_day)
+	
+	# 6. Check for Random Events for the new day
+	if EventManager.check_for_event():
+		trigger_event() # Changes state to EVENT and pauses the tree
 
 ## Pauses the game and changes state. Called when opening Station popups or Diary.
 func pause_game() -> void:

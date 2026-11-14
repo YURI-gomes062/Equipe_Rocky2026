@@ -14,11 +14,13 @@ config/name="Rocky_Project_Nasa2026"
 run/main_scene="res://teste_localizacao.tscn.tscn"
 config/features=PackedStringArray("4.7", "GL Compatibility")
 config/icon="res://icon.svg"
+
 [autoload]
 
 LocalizationManager="*uid://t4xd1c7ai067"
 GameManager="*uid://ctx22rgyoiyuk"
 ResourceManager="*uid://dmb0cbss6g4dx"
+EventManager="*uid://cfmxm567vbgtk"
 
 [display]
 
