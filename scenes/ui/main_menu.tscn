@@ -2,10 +2,11 @@
 
 [ext_resource type="Script" uid="uid://ilohmd37gw6w" path="res://scripts/ui/main_menu.gd" id="1_fe2o3"]
 [ext_resource type="Texture2D" uid="uid://c7ljmr16804iq" path="res://scenes/ui/Plano de fundo Lua.jpg" id="1_sl1te"]
+[ext_resource type="Texture2D" uid="uid://dk7ig2nk2ockg" path="res://scenes/ui/Robo .png" id="3_1g8jr"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ohlvd"]
 texture = ExtResource("1_sl1te")
-modulate_color = Color(1, 1, 1, 0.9137255)
+modulate_color = Color(0.69135684, 0.6913568, 0.69135684, 0.9137255)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_b60dt"]
 bg_color = Color(1, 1, 1, 1)
@@ -15,6 +16,10 @@ corner_radius_bottom_right = 16
 corner_radius_bottom_left = 16
 shadow_size = 5
 shadow_offset = Vector2(0, 3.41)
+
+[sub_resource type="LabelSettings" id="LabelSettings_ohlvd"]
+line_spacing = 2.0
+font_size = 44
 
 [node name="Control" type="Control" unique_id=1766570679]
 layout_mode = 3
@@ -40,17 +45,17 @@ theme_override_styles/panel = SubResource("StyleBoxTexture_ohlvd")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=475248485]
 layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -225.5
-offset_top = -164.0
-offset_right = 249.99994
-offset_bottom = 150.99997
+anchors_preset = -1
+anchor_left = 0.27
+anchor_top = 0.439
+anchor_right = 0.27
+anchor_bottom = 0.439
+offset_left = 216.09998
+offset_top = -98.120026
+offset_right = 691.6
+offset_bottom = 216.87997
 grow_horizontal = 2
-grow_vertical = 2
+grow_vertical = 0
 theme_override_constants/separation = 9
 
 [node name="BtnStart" type="Button" parent="VBoxContainer" unique_id=1736929066]
@@ -94,10 +99,10 @@ rotation = 0.00056672504
 
 [node name="Exit" type="Button" parent="PanelSettings" unique_id=20969861]
 layout_mode = 0
-offset_left = 955.30994
-offset_top = 546.4587
-offset_right = 1130.9313
-offset_bottom = 629.84064
+offset_left = 1623.995
+offset_top = 933.2501
+offset_right = 1889.8629
+offset_bottom = 1047.612
 size_flags_vertical = 3
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 35
@@ -146,3 +151,24 @@ theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 35
 theme_override_styles/normal = SubResource("StyleBoxFlat_b60dt")
 text = "ESPANHOL"
+
+[node name="Label" type="Label" parent="." unique_id=510432291]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -320.0
+offset_top = 23.0
+offset_right = 398.0
+offset_bottom = 325.0
+grow_horizontal = 2
+text = "    ━━━━━━━━━━━━━━━━━━━━━
+  ┃                      18                       ┃    
+  ┃    D A Y S                 I N        	  ┃  
+  ┃                 S P A C E              	  ┃   
+    ━━━━━━━━━━━━━━━━━━━━━"
+label_settings = SubResource("LabelSettings_ohlvd")
+
+[node name="Robo" type="Sprite2D" parent="." unique_id=1965536723]
+position = Vector2(360, 556)
+texture = ExtResource("3_1g8jr")
