@@ -1,0 +1,148 @@
+[gd_scene format=3 uid="uid://b3ouot4mfjwil"]
+
+[ext_resource type="Script" uid="uid://ilohmd37gw6w" path="res://scripts/ui/main_menu.gd" id="1_fe2o3"]
+[ext_resource type="Texture2D" uid="uid://c7ljmr16804iq" path="res://scenes/ui/Plano de fundo Lua.jpg" id="1_sl1te"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ohlvd"]
+texture = ExtResource("1_sl1te")
+modulate_color = Color(1, 1, 1, 0.9137255)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_b60dt"]
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+shadow_size = 5
+shadow_offset = Vector2(0, 3.41)
+
+[node name="Control" type="Control" unique_id=1766570679]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 3.0
+offset_top = 6.0
+offset_right = 3.0
+offset_bottom = 6.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_fe2o3")
+
+[node name="Panel" type="Panel" parent="." unique_id=223014451]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_ohlvd")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=475248485]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -225.5
+offset_top = -164.0
+offset_right = 249.99994
+offset_bottom = 150.99997
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 9
+
+[node name="BtnStart" type="Button" parent="VBoxContainer" unique_id=1736929066]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 35
+theme_override_styles/normal = SubResource("StyleBoxFlat_b60dt")
+text = "BTN_PLAY"
+
+[node name="BtnSettings" type="Button" parent="VBoxContainer" unique_id=1589966725]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 35
+theme_override_styles/normal = SubResource("StyleBoxFlat_b60dt")
+text = "BTN_SETTINGS"
+
+[node name="BtnExit" type="Button" parent="VBoxContainer" unique_id=1207683516]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 35
+theme_override_styles/normal = SubResource("StyleBoxFlat_b60dt")
+text = "BTN_EXIT"
+
+[node name="PanelSettings" type="Panel" parent="." unique_id=2986344]
+visible = false
+custom_minimum_size = Vector2(500, 350)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 3.0
+offset_top = -3.0
+offset_right = 3.0
+offset_bottom = -3.0
+grow_horizontal = 2
+grow_vertical = 2
+rotation = 0.00056672504
+
+[node name="Exit" type="Button" parent="PanelSettings" unique_id=20969861]
+layout_mode = 0
+offset_left = 955.30994
+offset_top = 546.4587
+offset_right = 1130.9313
+offset_bottom = 629.84064
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 35
+theme_override_styles/normal = SubResource("StyleBoxFlat_b60dt")
+text = "EXIT
+
+"
+
+[node name="HBoxLanguages" type="VBoxContainer" parent="PanelSettings" unique_id=1169690465]
+custom_minimum_size = Vector2(300, 150)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -223.96649
+offset_top = -159.18736
+offset_right = 244.54999
+offset_bottom = 162.20258
+grow_horizontal = 2
+grow_vertical = 2
+rotation = -0.0086016655
+
+[node name="BtnPt" type="Button" parent="PanelSettings/HBoxLanguages" unique_id=1598239348]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 35
+theme_override_styles/normal = SubResource("StyleBoxFlat_b60dt")
+text = "PORTUGUES
+"
+
+[node name="BtnEn" type="Button" parent="PanelSettings/HBoxLanguages" unique_id=240026593]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 35
+theme_override_styles/normal = SubResource("StyleBoxFlat_b60dt")
+text = "ENGLISH"
+
+[node name="BtnEs" type="Button" parent="PanelSettings/HBoxLanguages" unique_id=1398805825]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 35
+theme_override_styles/normal = SubResource("StyleBoxFlat_b60dt")
+text = "ESPANHOL"
