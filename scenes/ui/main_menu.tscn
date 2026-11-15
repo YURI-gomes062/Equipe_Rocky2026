@@ -164,7 +164,7 @@ offset_bottom = 325.0
 grow_horizontal = 2
 text = "    ━━━━━━━━━━━━━━━━━━━━━
   ┃                      18                       ┃    
-  ┃    D A Y S                 I N        	  ┃  
+  ┃    D A Y S                  I N         ┃  
   ┃                 S P A C E              	  ┃   
     ━━━━━━━━━━━━━━━━━━━━━"
 label_settings = SubResource("LabelSettings_ohlvd")
