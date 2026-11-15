@@ -79,4 +79,4 @@ text = "jump"
 
 [node name="RichTextLabel" type="RichTextLabel" parent="AnchorRoot/BottomLeftHUD/SpeechBubble/MarginContainer/VBoxContainer" unique_id=1868215147]
 layout_mode = 2
-text = "Oi eu sou o Lob^"
+text = "Olá, meu nome é Lôbo! Serei seu guia nesse posto lunar, vou te ensinar  sobre sobrevivência no espaço e todos os conceitos científicos envolvidos. Aqui iremos realizar pesquisas, manutenções e explorações! Mas lembre-se, toda ação tem uma reação !"
