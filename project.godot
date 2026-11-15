@@ -20,6 +20,7 @@ config/icon="res://icon.svg"
 LocalizationManager="*uid://t4xd1c7ai067"
 GameManager="*uid://ctx22rgyoiyuk"
 ResourceManager="*uid://dmb0cbss6g4dx"
+Settings="*uid://ckws2tj4sgypn"
 
 [display]
 
