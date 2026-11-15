@@ -1,93 +1,81 @@
 [gd_scene format=3 uid="uid://b3ouot4mfjwil"]
 
-[sub_resource type="Theme" id="Theme_ekxnf"]
+[ext_resource type="Texture2D" uid="uid://c7ljmr16804iq" path="res://scenes/ui/Plano de fundo Lua.jpg" id="1_sl1te"]
 
-[sub_resource type="LabelSettings" id="LabelSettings_xyf4q"]
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ohlvd"]
+texture = ExtResource("1_sl1te")
+modulate_color = Color(1, 1, 1, 0.9137255)
 
-[sub_resource type="Theme" id="Theme_87aya"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_b60dt"]
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+shadow_size = 5
+shadow_offset = Vector2(0, 3.41)
 
-[node name="MainMenu" type="Control" unique_id=1314614552]
+[node name="Control" type="Control" unique_id=1766570679]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -147.0
-offset_top = -47.0
-offset_right = -85.0
-offset_bottom = -47.0
-grow_horizontal = 2
-grow_vertical = 2
-theme = SubResource("Theme_ekxnf")
-
-[node name="ColorRect" type="ColorRect" parent="." unique_id=1496870528]
-layout_mode = 1
-anchors_preset = -1
-anchor_right = 1.0150001
-anchor_bottom = 1.0
 offset_left = 3.0
-offset_top = -28.0
-offset_right = -15.210083
-offset_bottom = -28.0
+offset_top = 6.0
+offset_right = 3.0
+offset_bottom = 6.0
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(0.047058824, 0.40784314, 1, 1)
 
-[node name="TitleLabel" type="Label" parent="." unique_id=1412496757]
-layout_mode = 0
-offset_left = 540.0
-offset_top = 100.0
-offset_right = 666.0
-offset_bottom = 123.0
-size_flags_horizontal = 4
-theme_override_font_sizes/font_size = 64
-text = "JOGO DA PORRA"
-label_settings = SubResource("LabelSettings_xyf4q")
-max_lines_visible = 5
+[node name="Panel" type="Panel" parent="." unique_id=223014451]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_ohlvd")
 
-[node name="Background" type="TextureRect" parent="." unique_id=12929808]
-modulate = Color(0, 0, 0.47058824, 1)
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=475248485]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -225.5
+offset_top = -164.0
+offset_right = 249.99994
+offset_bottom = 150.99997
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 9
+
+[node name="BtnStart" type="Button" parent="VBoxContainer" unique_id=1736929066]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 35
+theme_override_styles/normal = SubResource("StyleBoxFlat_b60dt")
+text = "START GAME"
+
+[node name="BtnSettings" type="Button" parent="VBoxContainer" unique_id=1589966725]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 35
+theme_override_styles/normal = SubResource("StyleBoxFlat_b60dt")
+text = "SETTINGS"
+
+[node name="BtnExit" type="Button" parent="VBoxContainer" unique_id=1207683516]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 35
+theme_override_styles/normal = SubResource("StyleBoxFlat_b60dt")
+text = "EXIT THE GAME"
+
+[node name="PanelSettings" type="Panel" parent="." unique_id=2986344]
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
-
-[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1568223428]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.5
-anchor_top = 0.4560185
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -140.0
-offset_top = -89.5
-offset_right = 140.0
-offset_bottom = 89.5
-grow_horizontal = 2
-grow_vertical = 2
-metadata/_edit_use_anchors_ = true
-
-[node name="BtnPlay" type="Button" parent="VBoxContainer" unique_id=590618043]
-custom_minimum_size = Vector2(280, 48)
-layout_mode = 2
-size_flags_horizontal = 4
-size_flags_vertical = 4
-text = "START GAME"
-
-[node name="BtnExit" type="Button" parent="VBoxContainer" unique_id=347220710]
-custom_minimum_size = Vector2(280, 48)
-layout_mode = 2
-size_flags_horizontal = 4
-size_flags_vertical = 4
-text = "LOAD GAME"
-
-[node name="LangSelect" type="OptionButton" parent="VBoxContainer" unique_id=773119547]
-custom_minimum_size = Vector2(280, 48)
-layout_mode = 2
-size_flags_horizontal = 4
-size_flags_vertical = 4
-theme = SubResource("Theme_87aya")
-button_pressed = true
-alignment = 1
-selected = 0
-item_count = 1
-popup/item_0/text = "SETTINGS"
-popup/item_0/id = 0
