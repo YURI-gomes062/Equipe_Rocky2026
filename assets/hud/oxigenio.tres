@@ -1,0 +1,7 @@
+[gd_resource type="AtlasTexture" format=3 uid="uid://d0f0shcwqcagk"]
+
+[ext_resource type="Texture2D" uid="uid://b2sj2t5ckyspg" path="res://assets/hud/Icone Oxigenio.png" id="1_svyj8"]
+
+[resource]
+atlas = ExtResource("1_svyj8")
+region = Rect2(595.9554, 297.918, 376.59766, 337.7966)
