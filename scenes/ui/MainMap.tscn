@@ -1,0 +1,105 @@
+[gd_scene format=3 uid="uid://c3o4o8olpw11n"]
+
+[ext_resource type="Texture2D" uid="uid://5y034s1oqq5b" path="res://assets/base/Janela com fundo.png" id="1_4dero"]
+[ext_resource type="Texture2D" uid="uid://bk7dcgxbpik5a" path="res://assets/base/Base Completa.png" id="1_61r7h"]
+[ext_resource type="Texture2D" uid="uid://crx5gg4gqn2vh" path="res://assets/base/Estufa.png" id="2_ovdjg"]
+[ext_resource type="Texture2D" uid="uid://dyt7in5v2pbu5" path="res://assets/base/Centro de Comunicação.png" id="4_qwykq"]
+[ext_resource type="Texture2D" uid="uid://yum3f44enat5" path="res://assets/base/Oficina.png" id="5_2hdlo"]
+[ext_resource type="Texture2D" uid="uid://dq5gh0cqir3gj" path="res://assets/base/Garagem do Rover.png" id="6_4685n"]
+
+[node name="MainMap" type="Control" unique_id=273062699]
+process_mode = 3
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect2" type="TextureRect" parent="." unique_id=1908166287]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -197.0
+offset_top = -235.0
+offset_right = 177.0
+offset_bottom = 133.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("1_4dero")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1864284684]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -768.0
+offset_top = -512.0
+offset_right = 768.0
+offset_bottom = 512.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("1_61r7h")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1191248707]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.4509804)
+
+[node name="Control" type="Control" parent="." unique_id=1886291915]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureButton" type="TextureButton" parent="Control" unique_id=2086885615]
+layout_mode = 1
+anchors_preset = -1
+offset_left = 210.0
+offset_top = 178.99998
+offset_right = 1746.0
+offset_bottom = 1203.0
+scale = Vector2(0.44, 0.44)
+texture_normal = ExtResource("2_ovdjg")
+
+[node name="TextureButton2" type="TextureButton" parent="Control" unique_id=1801149891]
+layout_mode = 1
+anchors_preset = -1
+offset_left = 733.0
+offset_top = 183.00002
+offset_right = 2269.0
+offset_bottom = 1207.0
+scale = Vector2(0.33, 0.33)
+texture_normal = ExtResource("4_qwykq")
+
+[node name="TextureButton3" type="TextureButton" parent="Control" unique_id=256711823]
+layout_mode = 1
+anchors_preset = -1
+offset_left = 283.0
+offset_top = 374.0
+offset_right = 1819.0
+offset_bottom = 1398.0
+scale = Vector2(0.38, 0.38)
+texture_normal = ExtResource("5_2hdlo")
+
+[node name="TextureButton4" type="TextureButton" parent="Control" unique_id=962442360]
+layout_mode = 1
+anchors_preset = -1
+offset_left = 1269.0
+offset_top = 610.99994
+offset_right = 2805.0
+offset_bottom = 1635.0
+scale = Vector2(0.295, 0.295)
+texture_normal = ExtResource("6_4685n")
