@@ -59,7 +59,7 @@ size_flags_vertical = 3
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 35
 theme_override_styles/normal = SubResource("StyleBoxFlat_b60dt")
-text = "START GAME"
+text = "BTN_PLAY"
 
 [node name="BtnSettings" type="Button" parent="VBoxContainer" unique_id=1589966725]
 layout_mode = 2
@@ -67,7 +67,7 @@ size_flags_vertical = 3
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 35
 theme_override_styles/normal = SubResource("StyleBoxFlat_b60dt")
-text = "SETTINGS"
+text = "BTN_SETTINGS"
 
 [node name="BtnExit" type="Button" parent="VBoxContainer" unique_id=1207683516]
 layout_mode = 2
@@ -75,9 +75,10 @@ size_flags_vertical = 3
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 35
 theme_override_styles/normal = SubResource("StyleBoxFlat_b60dt")
-text = "EXIT THE GAME"
+text = "BTN_EXIT"
 
 [node name="PanelSettings" type="Panel" parent="." unique_id=2986344]
+visible = false
 custom_minimum_size = Vector2(500, 350)
 layout_mode = 1
 anchors_preset = 15
