@@ -1,0 +1,45 @@
+[gd_scene format=3 uid="uid://ehs34exb81e0"]
+
+[ext_resource type="Script" uid="uid://v0tv103x7t5b" path="res://scripts/ui/station_popup.gd" id="1_jkr6v"]
+
+[node name="StationPopup" type="PopupPanel" unique_id=1294047348]
+process_mode = 3
+oversampling_override = 1.0
+size = Vector2i(400, 300)
+visible = true
+script = ExtResource("1_jkr6v")
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=2054327149]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 4.0
+offset_top = 4.0
+offset_right = -4.0
+offset_bottom = -4.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=1462721802]
+layout_mode = 2
+
+[node name="TitleLabel" type="Label" parent="MarginContainer/VBoxContainer" unique_id=1726178184]
+layout_mode = 2
+text = "TITLE_PLACEHOLDER"
+horizontal_alignment = 1
+
+[node name="EnergyLabel" type="Label" parent="MarginContainer/VBoxContainer" unique_id=1571858835]
+layout_mode = 2
+text = "ENERGY_PLACEHOLDER"
+horizontal_alignment = 1
+
+[node name="EnergySlider" type="HSlider" parent="MarginContainer/VBoxContainer" unique_id=1854552415]
+layout_mode = 2
+
+[node name="CloseButton" type="Button" parent="MarginContainer/VBoxContainer" unique_id=1579781943]
+layout_mode = 2
+text = "UI_CONFIRM"

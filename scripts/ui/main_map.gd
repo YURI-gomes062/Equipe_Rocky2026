@@ -11,6 +11,9 @@ extends Control
 	$Control/TextureButton4   # Room 4 (e.g., Research)
 ]
 
+@onready var station_popup_scene: PackedScene = preload("res://scenes/ui/StationPopup.tscn")
+var _station_popup_instance: PopupPanel
+
 # Constants
 const HOVER_SCALE_FACTOR: float = 1.15
 const ANIMATION_DURATION: float = 0.2
@@ -24,6 +27,14 @@ var _original_scales: Dictionary = {}
 func _ready() -> void:
 	# Ensure the dark overlay starts hidden
 	dark_overlay.visible = false
+	
+	_station_popup_instance = station_popup_scene.instantiate()
+	add_child(_station_popup_instance)
+	
+	room_buttons[0].pressed.connect(_on_room_pressed.bind("food", "STATION_FOOD"))
+	room_buttons[1].pressed.connect(_on_room_pressed.bind("oxygen", "STATION_OXYGEN"))
+	room_buttons[2].pressed.connect(_on_room_pressed.bind("research", "STATION_RESEARCH"))
+	room_buttons[3].pressed.connect(_on_room_pressed.bind("protection", "STATION_PROTECTION"))
 	
 	# Connect signals for all room buttons
 	for button in room_buttons:
@@ -62,3 +73,9 @@ func _on_room_mouse_exited(button: TextureButton) -> void:
 	var tween: Tween = create_tween()
 	tween.set_trans(Tween.TRANS_SINE).set_ease(Tween.EASE_OUT)
 	tween.tween_property(button, "scale", _original_scales[button], ANIMATION_DURATION)
+
+func _on_room_pressed(station_id: String, name_key: String) -> void:
+	GameManager.pause_game()
+	_station_popup_instance.setup(station_id, name_key)
+	_station_popup_instance.popup_centered()
+	
