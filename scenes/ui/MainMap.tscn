@@ -1,0 +1,109 @@
+[gd_scene format=3 uid="uid://c3o4o8olpw11n"]
+
+[ext_resource type="Texture2D" uid="uid://5y034s1oqq5b" path="res://assets/base/Janela com fundo.png" id="1_4dero"]
+[ext_resource type="Texture2D" uid="uid://bk7dcgxbpik5a" path="res://assets/base/Base Completa.png" id="1_61r7h"]
+[ext_resource type="Script" uid="uid://c6hjjaoftu08" path="res://scripts/ui/main_map.gd" id="1_qwykq"]
+[ext_resource type="Texture2D" uid="uid://cxklc60jeth8k" path="res://assets/base/estufa.tres" id="4_2hdlo"]
+[ext_resource type="Texture2D" uid="uid://cfj8h1nlq2o2n" path="res://assets/base/centro_comunicacao.tres" id="5_qwykq"]
+[ext_resource type="Texture2D" uid="uid://cf5ykq2uv3jdj" path="res://assets/base/oficina.tres" id="6_qwykq"]
+[ext_resource type="Texture2D" uid="uid://b1qcfrj1tls8n" path="res://assets/base/garagem.tres" id="7_2hdlo"]
+
+[node name="MainMap" type="Control" unique_id=273062699]
+process_mode = 3
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_qwykq")
+
+[node name="TextureRect2" type="TextureRect" parent="." unique_id=1908166287]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -197.0
+offset_top = -235.0
+offset_right = 177.0
+offset_bottom = 133.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("1_4dero")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1864284684]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -768.0
+offset_top = -512.0
+offset_right = 768.0
+offset_bottom = 512.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("1_61r7h")
+
+[node name="DarkOverlay" type="ColorRect" parent="." unique_id=1191248707]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.4509804)
+
+[node name="Control" type="Control" parent="." unique_id=1886291915]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureButton" type="TextureButton" parent="Control" unique_id=2086885615]
+layout_mode = 1
+anchors_preset = -1
+offset_left = 342.0
+offset_top = 277.0
+offset_right = 1010.1819
+offset_bottom = 729.2727
+grow_horizontal = 2
+scale = Vector2(0.44, 0.44)
+texture_normal = ExtResource("4_2hdlo")
+ignore_texture_size = true
+
+[node name="TextureButton2" type="TextureButton" parent="Control" unique_id=1801149891]
+layout_mode = 1
+anchors_preset = -1
+offset_left = 844.0
+offset_top = 275.0
+offset_right = 1577.0
+offset_bottom = 698.0
+scale = Vector2(0.33, 0.33)
+texture_normal = ExtResource("5_qwykq")
+
+[node name="TextureButton3" type="TextureButton" parent="Control" unique_id=256711823]
+layout_mode = 1
+anchors_preset = -1
+offset_left = 433.0
+offset_top = 490.0
+offset_right = 1046.0
+offset_bottom = 909.0
+scale = Vector2(0.38, 0.38)
+texture_normal = ExtResource("6_qwykq")
+
+[node name="TextureButton4" type="TextureButton" parent="Control" unique_id=962442360]
+layout_mode = 1
+anchors_preset = -1
+offset_left = 1386.0
+offset_top = 695.0
+offset_right = 2027.0
+offset_bottom = 1153.0
+scale = Vector2(0.295, 0.295)
+texture_normal = ExtResource("7_2hdlo")

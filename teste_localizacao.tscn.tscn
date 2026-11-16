@@ -1,5 +1,7 @@
 [gd_scene format=3 uid="uid://4c1mio6usoqb"]
 
+[ext_resource type="FontFile" uid="uid://r8xyq2yc0mu1" path="res://assets/fonts/Andika-Regular.ttf" id="1_4wi06"]
+
 [node name="testeMenu" type="Control" unique_id=1021157321]
 layout_mode = 3
 anchors_preset = 15
@@ -7,3 +9,9 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+
+[node name="Button" type="Button" parent="." unique_id=534716119]
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 8.0
+text = "BTN_PLAY"

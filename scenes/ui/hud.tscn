@@ -1,0 +1,179 @@
+[gd_scene format=3 uid="uid://cejs5kwovwxhy"]
+
+[ext_resource type="Script" uid="uid://cmvdou52858yx" path="res://scripts/ui/hud.gd" id="1_gss2c"]
+[ext_resource type="PackedScene" uid="uid://c3o4o8olpw11n" path="res://scenes/ui/MainMap.tscn" id="1_hqnrr"]
+[ext_resource type="Texture2D" uid="uid://bwd474vc4cbyf" path="res://assets/hud/Icone Energia.png" id="2_136eg"]
+[ext_resource type="Texture2D" uid="uid://d0f0shcwqcagk" path="res://assets/hud/oxigenio.tres" id="2_bo48s"]
+[ext_resource type="Texture2D" uid="uid://ca1tvnhgxksp2" path="res://assets/hud/Icone FOLHA.png" id="4_oj5la"]
+[ext_resource type="Texture2D" uid="uid://d20vgdomui0gt" path="res://assets/hud/Icone da Radiação.png" id="5_gss2c"]
+[ext_resource type="Texture2D" uid="uid://chv03ni3jtbai" path="res://assets/hud/Botão Maior.png" id="7_h022r"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tpteu"]
+atlas = ExtResource("2_136eg")
+region = Rect2(526.5873, 219.68239, 427.3501, 384.2735)
+
+[sub_resource type="Gradient" id="Gradient_8qguk"]
+colors = PackedColorArray(0, 0, 0, 1, 0.012617188, 0.012617188, 0.012617188, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_cjanw"]
+gradient = SubResource("Gradient_8qguk")
+width = 256
+
+[sub_resource type="Gradient" id="Gradient_136eg"]
+offsets = PackedFloat32Array(0.0025906735)
+colors = PackedColorArray(0.99607843, 0.46666667, 0.13725491, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_siu2y"]
+gradient = SubResource("Gradient_136eg")
+width = 256
+
+[sub_resource type="Gradient" id="Gradient_oj5la"]
+offsets = PackedFloat32Array(0)
+colors = PackedColorArray(0, 0.6509804, 1, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_h022r"]
+gradient = SubResource("Gradient_oj5la")
+width = 256
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_c60bc"]
+atlas = ExtResource("4_oj5la")
+region = Rect2(545.21387, 175.5176, 524.74817, 483.78992)
+
+[sub_resource type="Gradient" id="Gradient_gss2c"]
+offsets = PackedFloat32Array(0)
+colors = PackedColorArray(0, 0.8352941, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_gss2c"]
+gradient = SubResource("Gradient_gss2c")
+width = 256
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wyy00"]
+atlas = ExtResource("5_gss2c")
+region = Rect2(455.5588, 303.69736, 430.84598, 398.24905)
+
+[sub_resource type="Gradient" id="Gradient_h022r"]
+offsets = PackedFloat32Array(0)
+colors = PackedColorArray(1, 1, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_4jqwt"]
+gradient = SubResource("Gradient_h022r")
+width = 256
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g6q2k"]
+atlas = ExtResource("7_h022r")
+region = Rect2(546.35223, 336.10486, 353.07452, 337.57043)
+
+[node name="HUD" type="CanvasLayer" unique_id=1834808324]
+process_mode = 3
+layer = 2
+script = ExtResource("1_gss2c")
+
+[node name="HUDRoot" type="Control" parent="." unique_id=1924970044]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="MainMap" parent="HUDRoot" unique_id=273062699 instance=ExtResource("1_hqnrr")]
+layout_mode = 1
+
+[node name="MarginContainer" type="MarginContainer" parent="HUDRoot" unique_id=1650792582]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 232.0
+offset_top = -182.0
+offset_right = -259.0
+offset_bottom = -88.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_constants/margin_left = 15
+theme_override_constants/margin_top = 15
+theme_override_constants/margin_right = 15
+theme_override_constants/margin_bottom = 15
+
+[node name="HBoxContainer" type="HBoxContainer" parent="HUDRoot/MarginContainer" unique_id=1219273283]
+layout_mode = 2
+size_flags_vertical = 8
+
+[node name="EnergyContainer" type="HBoxContainer" parent="HUDRoot/MarginContainer/HBoxContainer" unique_id=1587460888]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+
+[node name="EnergyIcon" type="TextureRect" parent="HUDRoot/MarginContainer/HBoxContainer/EnergyContainer" unique_id=1410897440]
+layout_mode = 2
+texture = SubResource("AtlasTexture_tpteu")
+expand_mode = 3
+
+[node name="EnergyBar" type="TextureProgressBar" parent="HUDRoot/MarginContainer/HBoxContainer/EnergyContainer" unique_id=326679938]
+layout_mode = 2
+value = 56.0
+rounded = true
+texture_under = SubResource("GradientTexture2D_cjanw")
+texture_progress = SubResource("GradientTexture2D_siu2y")
+
+[node name="O2Container" type="HBoxContainer" parent="HUDRoot/MarginContainer/HBoxContainer" unique_id=1565046404]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+
+[node name="O2Icon" type="TextureRect" parent="HUDRoot/MarginContainer/HBoxContainer/O2Container" unique_id=1021869969]
+layout_mode = 2
+texture = ExtResource("2_bo48s")
+expand_mode = 3
+
+[node name="O2Bar" type="TextureProgressBar" parent="HUDRoot/MarginContainer/HBoxContainer/O2Container" unique_id=1799773148]
+layout_mode = 2
+value = 40.0
+rounded = true
+texture_under = SubResource("GradientTexture2D_cjanw")
+texture_progress = SubResource("GradientTexture2D_h022r")
+
+[node name="ResourceContainer" type="HBoxContainer" parent="HUDRoot/MarginContainer/HBoxContainer" unique_id=145626695]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+
+[node name="ResourceIcon" type="TextureRect" parent="HUDRoot/MarginContainer/HBoxContainer/ResourceContainer" unique_id=782954636]
+layout_mode = 2
+texture = SubResource("AtlasTexture_c60bc")
+expand_mode = 3
+
+[node name="ResourceBar" type="TextureProgressBar" parent="HUDRoot/MarginContainer/HBoxContainer/ResourceContainer" unique_id=909139132]
+layout_mode = 2
+value = 76.0
+rounded = true
+texture_under = SubResource("GradientTexture2D_cjanw")
+texture_progress = SubResource("GradientTexture2D_gss2c")
+
+[node name="RadiationContainer2" type="HBoxContainer" parent="HUDRoot/MarginContainer/HBoxContainer" unique_id=1355908302]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+
+[node name="O2Icon" type="TextureRect" parent="HUDRoot/MarginContainer/HBoxContainer/RadiationContainer2" unique_id=1798114961]
+layout_mode = 2
+texture = SubResource("AtlasTexture_wyy00")
+expand_mode = 3
+
+[node name="O2Bar" type="TextureProgressBar" parent="HUDRoot/MarginContainer/HBoxContainer/RadiationContainer2" unique_id=1510730367]
+layout_mode = 2
+value = 18.0
+rounded = true
+texture_under = SubResource("GradientTexture2D_cjanw")
+texture_progress = SubResource("GradientTexture2D_4jqwt")
+
+[node name="NextDayButton" type="TextureButton" parent="HUDRoot" unique_id=1412602375]
+layout_mode = 0
+offset_left = 1474.0
+offset_top = 444.0
+offset_right = 1827.0
+offset_bottom = 781.0
+scale = Vector2(0.42, 0.42)
+texture_normal = SubResource("AtlasTexture_g6q2k")
