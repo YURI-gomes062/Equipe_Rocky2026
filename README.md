@@ -38,7 +38,6 @@ The game was also designed for the challenge's specific target audience: **child
 | **Engine** | Godot Engine 4.x |
 | **Language** | GDScript |
 | **Target Platform** | Web (HTML5), playable directly in the browser |
-| **UI Design** | NEONIX UI asset pack (GONKEN Games) |
 | **Architecture** | SOLID principles, Data-Driven pattern with custom Resources, and a signal system for decoupled communication |
 
 ## 📊 Use of Real NASA Data (Challenge Requirement)
