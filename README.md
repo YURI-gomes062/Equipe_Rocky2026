@@ -1,66 +1,66 @@
 # 🚀 18 Days in Space
 
-**Jogo educativo de gestão de recursos para o NASA Space Apps Challenge 2026** 🌕
+**An educational resource-management game for the NASA Space Apps Challenge 2026** 🌕
 
 ![Godot](https://img.shields.io/badge/Godot-4.x-blue?logo=godot-engine)
 ![NASA Space Apps 2026](https://img.shields.io/badge/NASA-Space%20Apps%202026-red?logo=nasa)
-![Plataforma Web](https://img.shields.io/badge/Plataforma-Web-green?logo=html5)
-![Licença MIT](https://img.shields.io/badge/Licen%C3%A7a-MIT-yellow)
+![Web Platform](https://img.shields.io/badge/Platform-Web-green?logo=html5)
+![MIT License](https://img.shields.io/badge/License-MIT-yellow)
 
 ---
 
-## 📖 Sobre o Projeto
+## 📖 About the Project
 
-**18 Days in Space** é um *serious game* desenvolvido para o **NASA Space Apps Challenge 2026**, o maior hackathon global da NASA. O projeto foi criado especificamente para o desafio **"Build a Junior Astronaut Mission Trainer"**.
+**18 Days in Space** is a *serious game* developed for the **NASA Space Apps Challenge 2026**, NASA's largest global hackathon. The project was created specifically for the **"Build a Junior Astronaut Mission Trainer"** challenge.
 
-O jogo coloca crianças de **7 a 12 anos** no papel de **Comandante de um posto avançado lunar** que sofreu uma catástrofe e perdeu o contato com a Terra. A nave de resgate levará **18 dias** para chegar (baseado em trajetórias reais de missões de carga da NASA). Durante esse período, o jogador deve gerenciar recursos escassos, tomar decisões difíceis e manter a tripulação viva até a chegada do resgate.
+The game puts children aged **7 to 12** in the role of **Commander of a lunar outpost** that has suffered a catastrophe and lost contact with Earth. The rescue ship will take **18 days** to arrive (based on real NASA cargo mission trajectories). During this time, the player must manage scarce resources, make tough decisions, and keep the crew alive until rescue arrives.
 
-## 🎯 O Desafio da NASA
+## 🎯 The NASA Challenge
 
-O desafio proposto pela NASA pede uma aplicação interativa que permita aos estudantes gerenciar um posto avançado lunar ou marciano, equilibrando demandas concorrentes como suporte de vida, blindagem contra radiação, energia e produção de alimentos. A intenção é que os jovens experimentem em primeira mão as decisões que determinam o sucesso ou o fracasso de uma missão.
+The challenge set by NASA calls for an interactive application that lets students manage a lunar or Martian outpost, balancing competing demands such as life support, radiation shielding, power, and food production. The goal is for young people to experience firsthand the decisions that determine the success or failure of a mission.
 
-O jogo também foi projetado para atender ao público-alvo específico do desafio: **crianças de 7 a 12 anos**, garantindo uma interface simplificada, linguagem acessível e mecânicas intuitivas.
+The game was also designed for the challenge's specific target audience: **children aged 7 to 12**, ensuring a simplified interface, accessible language, and intuitive mechanics.
 
-## 🌟 Funcionalidades
+## 🌟 Features
 
-- 🔋 **Gestão de Energia:** a energia solar é limitada e variável a cada dia. O jogador deve distribuí-la entre os sistemas vitais.
-- 💨 **Suporte de Vida:** monitore os níveis de Oxigênio e Comida. O consumo da tripulação é constante e baseado em dados reais da ISS.
-- 🛡️ **Blindagem contra Radiação:** eventos de tempestade solar podem ocorrer. O jogador deve decidir entre desviar energia para o escudo ou arriscar a saúde da tripulação.
-- 🔬 **Pesquisa Científica:** alocar energia para a pesquisa é opcional, mas rende pontos e desbloqueia imagens reais da NASA (Galeria).
-- 🎲 **Eventos Aleatórios (Pity System):** eventos imprevisíveis (meteoros, falhas, suprimentos) forçam o jogador a tomar decisões rápidas. A chance de um evento aumenta a cada dia sem ocorrências, mantendo a tensão.
-- 🌍 **Localização (PT/EN):** todo o jogo, incluindo descrições de eventos e glossário, está disponível em Português e Inglês.
-- 📚 **Galeria e Glossário:** um sistema de recompensas que desbloqueia imagens reais da NASA e explica termos técnicos, com persistência de dados via IndexedDB (na versão Web).
+- 🔋 **Energy Management:** solar power is limited and varies every day. The player must distribute it among the vital systems.
+- 💨 **Life Support:** monitor Oxygen and Food levels. Crew consumption is constant and based on real ISS data.
+- 🛡️ **Radiation Shielding:** solar storm events can occur. The player must decide between diverting power to the shield or risking the crew's health.
+- 🔬 **Scientific Research:** allocating energy to research is optional, but it earns points and unlocks real NASA images (Gallery).
+- 🎲 **Random Events (Pity System):** unpredictable events (meteors, failures, supplies) force the player to make quick decisions. The chance of an event increases with each day without one, keeping the tension high.
+- 🌍 **Localization (PT/EN):** the entire game, including event descriptions and the glossary, is available in Portuguese and English.
+- 📚 **Gallery and Glossary:** a reward system that unlocks real NASA images and explains technical terms, with data persistence via IndexedDB (in the Web version).
 
-## 🛠️ Stack Tecnológico
+## 🛠️ Tech Stack
 
-| Item | Tecnologia |
+| Item | Technology |
 |---|---|
 | **Engine** | Godot Engine 4.x |
-| **Linguagem** | GDScript |
-| **Plataforma Alvo** | Web (HTML5), acessível diretamente no navegador |
-| **Design de UI** | Pack de assets NEONIX UI (GONKEN Games) |
-| **Arquitetura** | Princípios SOLID, padrão Data-Driven com Resources customizados e sistema de sinais (*signals*) para comunicação desacoplada |
+| **Language** | GDScript |
+| **Target Platform** | Web (HTML5), playable directly in the browser |
+| **UI Design** | NEONIX UI asset pack (GONKEN Games) |
+| **Architecture** | SOLID principles, Data-Driven pattern with custom Resources, and a signal system for decoupled communication |
 
-## 📊 Uso de Dados Reais da NASA (Requisito do Desafio)
+## 📊 Use of Real NASA Data (Challenge Requirement)
 
-Um dos diferenciais do projeto é a fundamentação em dados abertos da NASA para garantir o rigor científico, mesmo que de forma simplificada para o público infantil:
+One of the project's key strengths is its grounding in NASA open data to ensure scientific rigor, even if simplified for a young audience:
 
-- **Tempo de Jogo (18 Dias):** baseado em estudos de trajetórias de *"Fast Transit"* para missões de carga não tripuladas ao Gateway Lunar.
-- **Consumo de Oxigênio e Reciclagem:** inspirado no sistema **ECLSS** da Estação Espacial Internacional (ISS).
-- **Radiação:** dados do rover **Curiosity** e do sistema **DONKI** (*Space Weather Database*) da NASA para simular riscos de tempestades solares.
-- **Imagens da Galeria:** todas as imagens desbloqueáveis são de domínio público, obtidas do [NASA Image and Video Library](https://images.nasa.gov/).
+- **Game Length (18 Days):** based on "Fast Transit" trajectory studies for uncrewed cargo missions to the Lunar Gateway.
+- **Oxygen Consumption and Recycling:** inspired by the **ECLSS** system of the International Space Station (ISS).
+- **Radiation:** data from the **Curiosity** rover and NASA's **DONKI** (*Space Weather Database*) system to simulate solar storm risks.
+- **Gallery Images:** all unlockable images are in the public domain, obtained from the [NASA Image and Video Library](https://images.nasa.gov/).
 
-**Agradecimentos Especiais:**
+**Special Thanks:**
 
-- NASA Space Apps Challenge 2026 pela iniciativa.
-- Comunidade Godot Engine pelo suporte e ferramentas.
+- NASA Space Apps Challenge 2026 for the initiative.
+- The Godot Engine community for their support and tools.
 
-## 🔗 Links Úteis
+## 🔗 Useful Links
 
-- [Página do Desafio na NASA](https://www.spaceappschallenge.org/)
-- [Documentação da Godot Engine](https://docs.godotengine.org/)
+- [NASA Challenge Page](https://www.spaceappschallenge.org/)
+- [Godot Engine Documentation](https://docs.godotengine.org/)
 - [NASA Open Data Portal](https://data.nasa.gov/)
 
 ---
 
-<p align="center">Feito com 💙 para inspirar a próxima geração de exploradores espaciais. 🌌</p>
+<p align="center">Made with 💙 to inspire the next generation of space explorers. 🌌</p>
